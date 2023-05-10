@@ -84,4 +84,4 @@ jobs:
       - name: Вывод информации
         run: | 
           echo "\x1b[35m Что-то пошло не так...\x1b[0m"
-          echo "${{ github }}"
+          echo "${{ toJson(github) }}"
