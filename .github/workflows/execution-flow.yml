@@ -76,3 +76,11 @@ jobs:
         run: ls
       - name: Deploy
         run: echo "Deploying..."
+  report:
+    if: failure()
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Вывод информации
+        run: | 
+          echo "\x1b[35m Что-то пошло не так...\x1b[0m"
+          echo "${{ github }}"
